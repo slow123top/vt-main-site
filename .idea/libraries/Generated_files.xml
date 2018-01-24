@@ -1,0 +1,59 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/app.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/add.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/delete.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/detail.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/search/scs.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/site/sitestatus.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/site/startsite.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/sitestatus.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/summary.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/upload.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/user/check.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/user/login.js" />
+        <item url="file://$PROJECT_DIR$/dist/routes/user/register.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/checktoken.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/createtoken.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/errormessage.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/delete.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/find.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/insert.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/mongodb.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/update.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/mongodb/user.js" />
+        <item url="file://$PROJECT_DIR$/dist/util/uuid.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/app.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/add.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/delete.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/detail.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/search/scs.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/site/sitestatus.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/site/startsite.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/sitestatus.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/summary.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/upload.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/user/check.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/user/login.js" />
+      <root url="file://$PROJECT_DIR$/dist/routes/user/register.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/checktoken.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/createtoken.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/errormessage.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/delete.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/find.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/insert.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/mongodb.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/update.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/mongodb/user.js" />
+      <root url="file://$PROJECT_DIR$/dist/util/uuid.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

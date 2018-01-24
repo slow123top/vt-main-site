@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../util/mongodb.js"],"names":["mongoClient","require","MongoClient"],"mappings":";;AAAA;AACA,IAAMA,cAAcC,QAAQ,SAAR,EAAmBC,WAAvC","file":"mongodb.js","sourcesContent":["//建立mongodb客户端\r\nconst mongoClient = require('mongodb').MongoClient\r\n\r\n\r\n"]}
