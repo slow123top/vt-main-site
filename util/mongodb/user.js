@@ -6,6 +6,6 @@ let userSchema = new Schema({
     id: {type: String},
     username: {type: String},
     password: {type: String},
-    type: {type: Number}
+    type: {type: String}
 })
 module.exports = mongoose.model('users', userSchema)

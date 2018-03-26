@@ -10,10 +10,9 @@ router.post('/', function (req, res, next) {
     // let username = req.body.username
     // let password = req.body.password
     // 学会解构赋值
-    let {username, password} = req.body
-
+    let {username, password, userType} = req.body
+    console.log(typeof userType);
     if (!username) {
-
         res.json({
             status: 'ERROR',
             message: '此用户不存在！'
@@ -23,7 +22,14 @@ router.post('/', function (req, res, next) {
         // let username = req.body.username
         findData(username).then((param) => {
             let userInfo = param[0]
-            if (username === userInfo['username'] && password === userInfo['password']) {
+            let dbUsername = userInfo['username'], dbPassword = userInfo['password'], dbType = userInfo['type']
+            console.log(typeof dbType);
+            if (userType !== dbType) {
+                res.json({
+                    status: 'ERROR',
+                    message: '此类用户不存在',
+                })
+            } else if (username === dbUsername && password === dbPassword && userType === dbType) {
                 res.json({
                     status: 'SUCCESS',
                     message: '登陆成功',

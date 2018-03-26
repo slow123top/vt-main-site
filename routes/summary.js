@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 let http = require('http')
 let options_1 = {
-    host: '192.168.11.24',
+    host: '192.168.11.9',
     port: 3000,
     path: '/summary'
     // headers: {
