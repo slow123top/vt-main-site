@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const createToken = require('../../util/createtoken')
 const findData = require('../../util/mongodb/find')
-
+const {getMd5} = require('../../util/crypto')
 
 /* login. */
 router.post('/', function (req, res, next) {
@@ -11,7 +11,6 @@ router.post('/', function (req, res, next) {
     // let password = req.body.password
     // 学会解构赋值
     let {username, password, userType} = req.body
-    console.log(typeof userType);
     if (!username) {
         res.json({
             status: 'ERROR',
@@ -23,13 +22,12 @@ router.post('/', function (req, res, next) {
         findData(username).then((param) => {
             let userInfo = param[0]
             let dbUsername = userInfo['username'], dbPassword = userInfo['password'], dbType = userInfo['type']
-            console.log(typeof dbType);
             if (userType !== dbType) {
                 res.json({
                     status: 'ERROR',
                     message: '此类用户不存在',
                 })
-            } else if (username === dbUsername && password === dbPassword && userType === dbType) {
+            } else if (username === dbUsername && getMd5(password) === dbPassword && userType === dbType) {
                 res.json({
                     status: 'SUCCESS',
                     message: '登陆成功',

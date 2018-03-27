@@ -2,13 +2,12 @@ const express = require('express');
 const router = express.Router();
 const insertData = require('../../util/mongodb/insert')
 const getUuid = require('../../util/uuid')
-
+const {getMd5} = require('../../util/crypto')
 
 /* login. */
 router.post('/', function (req, res, next) {
     //ES6 字符串解构赋值
     let {username, password, checkPassword, userType} = req.body
-    console.log(req.body)
     if (username === '' || password === '' || checkPassword === '') {
         res.json({
             status: 'ERROR',
@@ -25,7 +24,7 @@ router.post('/', function (req, res, next) {
             message: '两次密码输入不一致'
         })
     } else {
-        insertData({id: getUuid(), username: username, password: password, type: userType})
+        insertData({id: getUuid(), username: username, password: getMd5(password), type: userType})
             .then((param) => {
                 res.json({
                     status: 'SUCCESS',

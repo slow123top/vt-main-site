@@ -9,6 +9,10 @@ router.post('/', function (req, res, next) {
                 status: 'ERROR',
                 message: '该用户名已存在，请重新输入'
             })
+        } else {
+            res.json({
+                status: 'SUCCESS'
+            })
         }
     })
 })
