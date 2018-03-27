@@ -6,10 +6,8 @@ const getUuid = require('../../util/uuid')
 
 /* login. */
 router.post('/', function (req, res, next) {
-    // let username = req.body.username
-    // let password = req.body.password
-    // let checkPassword = req.body.checkPassword
-    let {username, password, checkPassword} = req.body
+    //ES6 字符串解构赋值
+    let {username, password, checkPassword, userType} = req.body
     console.log(req.body)
     if (username === '' || password === '' || checkPassword === '') {
         res.json({
@@ -27,7 +25,7 @@ router.post('/', function (req, res, next) {
             message: '两次密码输入不一致'
         })
     } else {
-        insertData({id: getUuid(), username: username, password: password, type: 0})
+        insertData({id: getUuid(), username: username, password: password, type: userType})
             .then((param) => {
                 res.json({
                     status: 'SUCCESS',

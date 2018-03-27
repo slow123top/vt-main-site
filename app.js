@@ -17,7 +17,7 @@ var checkToken = require('./routes/user/check');
 var sitesStatus = require('./routes/site/sitestatus');
 var startSite = require('./routes/site/startsite');
 var scs = require('./routes/search/scs');
-
+var validateUsername = require('./routes/user/validateusername')
 var app = express();
 
 // view engine setup
@@ -43,6 +43,7 @@ app.use('/summary', summary);
 app.use('/detail', detail);
 app.use('/login', login)
 app.use('/register', register)
+app.use('/validateUsername', validateUsername)
 app.use('/check', checkToken)
 app.use('/sitesStatus', sitesStatus)
 app.use('/startSite', startSite)
