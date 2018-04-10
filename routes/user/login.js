@@ -6,9 +6,7 @@ const {getMd5} = require('../../util/crypto')
 
 /* login. */
 router.post('/', function (req, res, next) {
-    // console.log(req.headers['authorization']);
-    // let username = req.body.username
-    // let password = req.body.password
+
     // 学会解构赋值
     let {username, password, userType} = req.body
     if (!username) {
@@ -18,7 +16,6 @@ router.post('/', function (req, res, next) {
         })
     } else {
         //    用户名和密码正确  返回正确信息  并创建token
-        // let username = req.body.username
         findData(username).then((param) => {
             let userInfo = param[0]
             let dbUsername = userInfo['username'], dbPassword = userInfo['password'], dbType = userInfo['type']
@@ -32,7 +29,11 @@ router.post('/', function (req, res, next) {
                     status: 'SUCCESS',
                     message: '登陆成功',
                     username: req.body.username,
-                    token: createToken(username)
+                    token: createToken(username),
+                    type: userType,
+                    avatarAddr: userInfo['avataraddr'],
+                    introduction: userInfo['introduction'],
+                    career: userInfo['career']
                 })
             } else {
                 res.json({
@@ -44,7 +45,6 @@ router.post('/', function (req, res, next) {
             .catch((param) => {
                 console.log(param)
             })
-
     }
 });
 

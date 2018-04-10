@@ -73,7 +73,7 @@ router.get('/', function (req, res, next) {
     })
     .then(function () {
         return new Promise(function (resolve, reject) {
-            httpReq = http.request(options_2, resp => {
+            httpReq = http.request(options_1, resp => {
                 resp.on('data', function (chunk) {
                     console.log('BODY: ' + chunk);
                     temp.push(JSON.parse(chunk));
@@ -87,7 +87,7 @@ router.get('/', function (req, res, next) {
     })
     .then(function () {
         return new Promise(function (resolve, reject) {
-            httpReq = http.request(options_3, resp => {
+            httpReq = http.request(options_1, resp => {
                 resp.on('data', function (chunk) {
                     console.log('BODY: ' + chunk);
                     temp.push(JSON.parse(chunk));
@@ -101,7 +101,7 @@ router.get('/', function (req, res, next) {
     })
     .then(function () {
         return new Promise(function (resolve, reject) {
-            httpReq = http.request(options_4, resp => {
+            httpReq = http.request(options_1, resp => {
                 resp.on('data', function (chunk) {
                     console.log('BODY: ' + chunk);
                     temp.push(JSON.parse(chunk));
@@ -113,7 +113,7 @@ router.get('/', function (req, res, next) {
         })
     })
     .then(function () {
-        httpReq = http.request(options_5, resp => {
+        httpReq = http.request(options_1, resp => {
             resp.on('data', function (chunk) {
                 console.log('BODY: ' + chunk);
                 temp.push(JSON.parse(chunk));

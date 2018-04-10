@@ -17,6 +17,8 @@ var sitesStatus = require('./routes/site/sitestatus');
 var startSite = require('./routes/site/startsite');
 var scs = require('./routes/search/scs');
 var validateUsername = require('./routes/user/validateusername')
+var imageUpload = require('./routes/user/imageupload')
+var getUserInfo = require('./routes/user/get_user_info')
 var app = express();
 
 // view engine setup
@@ -49,6 +51,8 @@ app.use('/startSite', startSite)
 app.use('/delete', deleteFile)
 app.use('/upload', upload)
 app.use('/scs', scs)
+app.use('/imageUpload', imageUpload)
+app.use('/getUserInfo', getUserInfo)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
